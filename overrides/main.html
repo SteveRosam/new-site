@@ -17,87 +17,151 @@
 {% endblock %}
 
 {% block header %}
-  <header class="md-header" data-md-component="header">
-    <nav class="md-header-nav md-grid" aria-label="{{ lang.t('header.title') }}">
+  <header class="site-header">
+    <div class="header-container">
       <!-- Logo -->
-      <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}" 
-         class="md-header-nav__button md-logo" 
-         aria-label="{{ config.site_name }}">
-        <img src="{{ 'img/logo.png' | url }}" width="66" height="66" alt="logo">
-        <span class="md-header-nav__title">
-          {{ config.site_name }}
-        </span>
+      <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}" class="site-logo">
+        <img src="{{ 'img/logo.png' | url }}" alt="{{ config.site_name }}" class="logo-img">
+        <span class="site-name">{{ config.site_name }}</span>
       </a>
-      
+
       <!-- Mobile menu button -->
-      <button class="md-header-nav__menu-button" aria-label="Toggle navigation">
-        <i class="material-icons">menu</i>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-icon"></span>
+        <span class="sr-only">Menu</span>
       </button>
-      
+
       <!-- Navigation -->
-      <div class="md-header-nav__items" id="main-navigation">
-        <ul class="md-header-nav__list">
+      <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+        <ul class="nav-menu">
           {% for nav_item in nav %}
             {% if not nav_item.children %}
-              <li class="md-header-nav__item">
-                <a href="{{ nav_item.url | url }}" class="md-header-nav__link">
-                  {{ nav_item.title }}
-                </a>
+              <li class="menu-item">
+                <a href="{{ nav_item.url | url }}" class="nav-link">{{ nav_item.title }}</a>
               </li>
             {% else %}
-              <li class="md-header-nav__item md-header-nav__item--nested">
-                <a href="#" class="md-header-nav__link">
-                  {{ nav_item.title }}
-                  <span class="md-header-nav__icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                      <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" fill="currentColor" />
-                    </svg>
-                  </span>
-                </a>
-                <nav class="md-header-nav__dropdown" aria-label="{{ nav_item.title }}">
-                  <ul class="md-header-nav__dropdown-list">
-                    {% for nav_item in nav_item.children %}
-                      <li class="md-header-nav__dropdown-item">
-                        <a href="{{ nav_item.url | url }}" class="md-header-nav__dropdown-link">
-                          {{ nav_item.title }}
-                        </a>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </nav>
+              <li class="menu-item menu-item-has-children">
+                <button class="submenu-toggle" aria-expanded="false" aria-controls="submenu-{{ loop.index }}">
+                  <span>{{ nav_item.title }}</span>
+                  <svg class="dropdown-icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                  </svg>
+                </button>
+                <ul id="submenu-{{ loop.index }}" class="submenu" hidden>
+                  {% for child in nav_item.children %}
+                    <li class="menu-item">
+                      <a href="{{ child.url | url }}" class="nav-link submenu-link">{{ child.title }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
               </li>
             {% endif %}
           {% endfor %}
         </ul>
-      </div>
+      </nav>
+    </div>
+  </header>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Toggle mobile menu
+      const menuToggle = document.querySelector('.menu-toggle');
+      const primaryNav = document.getElementById('primary-nav');
       
-      <script>
-        // Toggle mobile menu
-        document.querySelector('.md-header-nav__menu-button').addEventListener('click', function() {
-          document.getElementById('main-navigation').classList.toggle('md-header-nav__items--visible');
+      if (menuToggle && primaryNav) {
+        menuToggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+          this.setAttribute('aria-expanded', !expanded);
+          primaryNav.classList.toggle('is-visible');
+          document.body.classList.toggle('menu-open');
         });
+
+        // Toggle submenus
+        const submenuToggles = document.querySelectorAll('.submenu-toggle');
         
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-          const nav = document.getElementById('main-navigation');
-          const menuButton = document.querySelector('.md-header-nav__menu-button');
-          if (!nav.contains(event.target) && !menuButton.contains(event.target)) {
-            nav.classList.remove('md-header-nav__items--visible');
-          }
-        });
-        
-        // Set active link
-        document.addEventListener('DOMContentLoaded', function() {
-          const currentPath = window.location.pathname;
-          const navLinks = document.querySelectorAll('.md-header-nav__link');
-          
-          navLinks.forEach(link => {
-            if (link.getAttribute('href') === currentPath) {
-              link.classList.add('md-header-nav__link--active');
+        submenuToggles.forEach(toggle => {
+          toggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            const submenu = this.nextElementSibling;
+            const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+            
+            // Close other open submenus at the same level
+            const parentItem = this.closest('.menu-item-has-children');
+            if (parentItem) {
+              const siblings = parentItem.parentElement.querySelectorAll('.menu-item-has-children');
+              siblings.forEach(sibling => {
+                if (sibling !== parentItem) {
+                  const btn = sibling.querySelector('.submenu-toggle');
+                  const sub = sibling.querySelector('.submenu');
+                  if (btn && sub) {
+                    btn.setAttribute('aria-expanded', 'false');
+                    sub.hidden = true;
+                  }
+                }
+              });
             }
+            
+            // Toggle current submenu
+            this.setAttribute('aria-expanded', !expanded);
+            submenu.hidden = expanded;
           });
         });
-      </script>
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!primaryNav.contains(e.target) && !menuToggle.contains(e.target)) {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('is-visible');
+            document.body.classList.remove('menu-open');
+            
+            // Close all submenus
+            document.querySelectorAll('.submenu-toggle').forEach(toggle => {
+              toggle.setAttribute('aria-expanded', 'false');
+              const submenu = toggle.nextElementSibling;
+              if (submenu && submenu.classList.contains('submenu')) {
+                submenu.hidden = true;
+              }
+            });
+          }
+        });
+
+        // Close menu on escape key
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            menuToggle.setAttribute('aria-expanded', 'false');
+            primaryNav.classList.remove('is-visible');
+            document.body.classList.remove('menu-open');
+          }
+        });
+
+        // Set active link
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+          try {
+            const linkUrl = new URL(link.href);
+            if (linkUrl.pathname === currentPath) {
+              link.classList.add('active');
+              // Also mark parent menu item as active
+              let parentItem = link.closest('.menu-item-has-children');
+              while (parentItem) {
+                const toggle = parentItem.querySelector('.submenu-toggle');
+                if (toggle) {
+                  toggle.classList.add('active');
+                }
+                parentItem = parentItem.parentElement.closest('.menu-item-has-children');
+              }
+            }
+          } catch (e) {
+            console.warn('Invalid URL in navigation:', link.href);
+          }
+        });
+      }
+    });
+  </script>
       
       <!-- Search and theme toggle -->
       <div class="md-header-nav__options">
@@ -312,6 +376,21 @@
       font-size: 1.5rem;
       cursor: pointer;
       padding: 0.5rem;
+    }
+    
+    /* Menu icon colors */
+    .menu-toggle .menu-icon,
+    .menu-toggle .menu-icon::before,
+    .menu-toggle .menu-icon::after {
+      background-color: white;
+      transition: background-color 0.3s ease;
+    }
+    
+    /* Change to black when menu is expanded */
+    .menu-toggle[aria-expanded="true"] .menu-icon,
+    .menu-toggle[aria-expanded="true"] .menu-icon::before,
+    .menu-toggle[aria-expanded="true"] .menu-icon::after {
+      background-color: #000;
     }
     
     /* Responsive styles */
