@@ -64,25 +64,23 @@ SimuFlow is an open, lightweight platform that integrates your live data into ex
 
 ### Core Capabilities
 
-<div class="grid cards" markdown>
+- **Real-time Data Integration**  
+  Connect to any data source and stream high-frequency time series data with sub-millisecond latency. Built-in connectors for MQTT, Kafka, OPC-UA, and more.
 
-- **Real-time Data Integration**
-  - Collect real-world data from any test rig, device, asset or fleet
-  - Create a high-quality, centralized data repository with an indexed catalog
-  
-- **Configuration Management**
-  - Configure devices, tests, models and simulations with version control
-  - Record every version of every experiment in the data catalog
+- **Time-Series Database**  
+  Purpose-built time-series database optimized for high-velocity sensor data with automatic downsampling, retention policies, and efficient compression.
 
-- **Run Experiments**
-  - Serve models and automate simulations with simple workflows
-  - Containerized environments designed specifically for hardware engineers
+- **Stream Processing**  
+  Process streaming data in real-time with Python or SQL. Run complex event processing, anomaly detection, and predictive analytics on live data streams.
 
-- **Virtual Engineering**
-  - Discover data from old programs and reprocess it with new models
-  - Accelerate new product concepts through virtual prototyping
+- **Model Serving**  
+  Deploy and serve machine learning models as scalable microservices with automatic scaling and versioning. Support for ONNX, TensorFlow, and PyTorch models.
 
-</div>
+- **Visualization & Monitoring**  
+  Real-time dashboards and monitoring tools to visualize data streams, set alerts, and track system health.
+
+- **Enterprise Security**  
+  End-to-end encryption, role-based access control, and audit logging to meet enterprise security and compliance requirements.
 
 ## Get Started
 
