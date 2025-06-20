@@ -7,11 +7,15 @@
 /* Base styles */
 .site-header {
   position: relative;
-  background: var(--md-primary-fg-color);
+  /* background: var(--md-primary-fg-color); */
   color: var(--md-primary-bg-color);
   z-index: 100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   font-family: 'Alliance No.1', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.site-name{
+  color: var(--md-primary-fg-color);
 }
 
 .header-container {
@@ -742,7 +746,7 @@ code, kbd, pre, samp {
 /* Base styles */
 .site-header {
   position: relative;
-  background: var(--md-primary-fg-color);
+  /* background: var(--md-primary-fg-color); */
   color: var(--md-primary-bg-color);
   z-index: 100;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

@@ -1,3 +1,20 @@
+
+### R&D Just Got Easy
+<div class="hero">
+  <div class="hero-content">
+    <h1>Accelerate Your Hardware Development with Data</h1>
+    <p class="lead">Connect, analyze, and optimize your physical systems with an integrated platform for data, models, and simulations.</p>
+    <div class="hero-buttons">
+      <a href="#get-started" class="md-button md-button--primary">Get Started</a>
+      <a href="#learn-more" class="md-button md-button--secondary">Learn More →</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <br/>
+    <img src="./img/f1-aero.png" alt="SiMuFlow Platform Visualization" style="max-width: 100%; height: auto;">
+  </div>
+</div>
+
 # Consolidate your data, models and configurations in one platform
 
 Hardware engineers use the SiMuFlow platform to digitize physical systems. Because digital is always faster and cheaper than physical.
