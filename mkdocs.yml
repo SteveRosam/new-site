@@ -41,23 +41,7 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.tilde
 
-# Navigation
-nav:
-  - Features:
-    - Overview: features/index.md
-    - Core Capabilities: features/capabilities.md
-    - Integration: features/integration.md
-  - Solutions:
-    - For Hardware Teams: solutions/hardware-teams.md
-    - For Data Scientists: solutions/data-science.md
-  - Documentation:
-    - Getting Started: docs/getting-started.md
-    - API Reference: docs/api-reference.md
-    - Configuration: docs/configuration.md
-  - About:
-    - Company: about/company.md
-    - Team: about/team.md
-    - Contact: about/contact.md
+
 
 # Customization
 extra_css:

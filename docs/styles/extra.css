@@ -794,6 +794,7 @@ code, kbd, pre, samp {
   width: 2.5rem;
   height: 2rem;
   position: relative;
+  margin-left: auto;
 }
 
 .menu-icon,
