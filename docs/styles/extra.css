@@ -81,6 +81,196 @@
 }
 
 /* ==========================================================================
+   Homepage Components
+   ========================================================================== */
+
+/* Hero section */
+.md-typeset h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: var(--md-default-fg-color);
+}
+
+/* Cards grid */
+.grid.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.6rem;
+  margin: 2rem 0;
+}
+
+.grid.cards > * {
+  margin: 0;
+}
+
+/* Individual cards */
+.grid.cards .md-typeset .card {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--md-default-bg-color);
+  overflow: hidden;
+}
+
+.grid.cards .md-typeset .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.grid.cards .card h3 {
+  margin: 1rem 1.2rem 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color);
+}
+
+.grid.cards .card hr {
+  margin: 0 1.2rem 1rem;
+  border: 0;
+  border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.grid.cards .card p {
+  margin: 0 1.2rem 1.5rem;
+  flex-grow: 1;
+  color: var(--md-default-fg-color--light);
+}
+
+.grid.cards .card a {
+  display: inline-block;
+  margin: 0 1.2rem 1.2rem;
+  color: var(--md-accent-fg-color);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.grid.cards .card a:hover {
+  color: var(--md-primary-fg-color);
+  text-decoration: underline;
+}
+
+.grid.cards .card a::after {
+  content: "→";
+  margin-left: 0.5rem;
+  transition: transform 0.2s;
+}
+
+.grid.cards .card a:hover::after {
+  transform: translateX(4px);
+}
+
+/* Case study cards */
+.grid.cards .card h3 {
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.grid.cards .card h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background: var(--md-accent-fg-color);
+  border-radius: 2px;
+}
+
+/* Buttons */
+.md-button {
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 0.6em 1.2em;
+  margin: 0.5em 0.5em 0.5em 0;
+  transition: all 0.2s;
+}
+
+.md-button--primary {
+  background-color: var(--md-primary-fg-color);
+  border-color: var(--md-primary-fg-color);
+  color: white;
+}
+
+.md-button--primary:hover {
+  background-color: var(--md-primary-fg-color--dark);
+  border-color: var(--md-primary-fg-color--dark);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Center align content */
+.center {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+/* Platform section */
+#what-is-mudata {
+  margin: 4rem 0 2rem;
+}
+
+#what-is-mudata h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--md-default-fg-color);
+}
+
+#what-is-mudata p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--md-default-fg-color--light);
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+/* Core capabilities */
+#core-capabilities {
+  margin: 4rem 0;
+}
+
+#core-capabilities h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--md-default-fg-color);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 76.1875em) {
+  .grid.cards {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+  
+  .md-typeset h1 {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .grid.cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .center {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .md-button {
+    width: 100%;
+    margin: 0.25rem 0;
+  }
+}
+
+/* ==========================================================================
    Navigation - Corporate Style
    ========================================================================== */
 

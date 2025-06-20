@@ -1,92 +1,92 @@
-# Welcome to Your Professional Documentation
+# Consolidate your data, models and configurations in one platform
 
-<div class="hero">
-  <h1>Transform Your Business with Our Solutions</h1>
-  <p>Streamline operations, enhance productivity, and drive growth with our comprehensive platform designed for modern enterprises.</p>
-  <a href="#solutions" class="md-button md-button--primary">Explore Solutions</a>
-  <a href="getting-started/installation.md" class="md-button">Get Started</a>
-</div>
+Hardware engineers use the SimuFlow platform to digitize physical systems. Because digital is always faster and cheaper than physical.
 
-<div class="grid cards" markdown id="solutions">
+## Use Cases
 
-- <i class="mdi mdi-rocket-launch mdi-24px"></i> __Rapid Deployment__
+<div class="grid cards" markdown>
 
+- ### Accelerate Product Development
+    
     ---
     
-    Get up and running quickly with our streamlined onboarding process and comprehensive documentation.
+    Deliver high-quality products faster with an integrated, model-based data platform. Reduce risk, shorten timelines, and close the design-validation loop using real-time data from test rigs, fleets, and simulations.
     
-    [Get Started <i class="fas fa-arrow-right"></i>](getting-started/installation.md)
+    [Learn more →](#accelerate-product-development)
 
-- <i class="mdi mdi-book-open-variant mdi-24px"></i> __Comprehensive Guides__
-
+- ### Optimize Production Processes
+    
     ---
     
-    Master our platform with detailed guides and best practices for every feature and use case.
+    Develop novel processes by running model-based experiments on live rig data. Connect high-fidelity models to live production data to automate processes and continuously optimize performance.
     
-    [View Guides <i class="fas fa-arrow-right"></i>](guide/writing.md)
+    [Learn more →](#optimize-production)
 
-- <i class="mdi mdi-api mdi-24px"></i> __Developer Resources__
+- ### Reduce Asset Downtime
+    
     ---
     
-    Access our complete API documentation and integration guides for seamless implementation.
+    Monitor complex, distributed assets and predict failures by connecting live data to high-fidelity models. Quickly evolve models through iterative experiments and continuous learning.
     
-    [View API Reference :fontawesome-solid-arrow-right:](reference/commands.md)
+    [Learn more →](#reduce-downtime)
 
 </div>
 
-## Why Choose Our Platform?
+## Case Studies
 
-<div class="grid" markdown>
+<div class="grid cards" markdown>
 
-:material-check-circle: **Powerful Features**  
-Our platform offers a comprehensive set of tools designed to streamline your workflow and boost productivity.
+- ### Hardware Devices
+    
+    **Viessmann** uses SimuFlow to accelerate R&D of clean energy HVAC products. By collecting a high-quality catalog of tests, configurations, models and simulations, and running rapid experiments, they reduce design-validation cycle time by 50%.
+    
+    [Read case study →](#)
 
-:material-shield-check: **Enterprise-Grade Security**  
-Built with security in mind, ensuring your data is always protected with industry-leading encryption.
-
-:material-scale-balance: **Scalable Solutions**  
-Grow with confidence knowing our platform scales with your business needs.
-
-:material-head-cog: **Intuitive Interface**  
-Designed for users of all skill levels with an intuitive and clean interface.
-
-</div>
-
-## Get Started in Minutes
-
-1. **Install** our platform
-   ```bash
-   pip install your-package
-   ```
-
-2. **Configure** your settings
-   ```yaml
-   # config.yaml
-   api_key: your-api-key
-   environment: production
-   ```
-
-3. **Start Building**
-   ```python
-   import your_package
-   
-   # Initialize the client
-   client = your_package.Client()
-   
-   # Start using the platform
-   result = client.do_something_amazing()
-   ```
-
-## Trusted By Industry Leaders
-
-<div class="grid" markdown>
-
-![Company 1](assets/images/company1.svg){ width=200 }
-![Company 2](assets/images/company2.svg){ width=200 }
-![Company 3](assets/images/company3.svg){ width=200 }
+- ### Manufacturing
+    
+    **CloudNC** leverages SimuFlow to optimize and automate CNC machines. By modeling cutting processes, CloudNC can optimize CAM profiles, anticipate tool breakages, and predict production cycle times. This improves Overall Equipment Effectiveness (OEE) by over 5%.
+    
+    [Read case study →](#)
+- ### Energy
+    
+    **Juniz** uses SimuFlow to monitor complex battery plants distributed across Germany. By modeling batteries at the cell-level and running them on live plant data, they can cost-effectively manage battery usage and proactively detect battery faults, saving significant downtime costs.
+    
+    [Read case study →](#)
 
 </div>
 
-## Ready to Get Started?
+## The SimuFlow Platform
 
-[Get Started for Free :fontawesome-solid-arrow-right:](getting-started/installation.md){ .md-button .md-button--primary }
+### What is SimuFlow?
+
+SimuFlow is an open, lightweight platform that integrates your live data into existing Model-Based Development tools (like MATLAB, Simulink and Modelica) to consolidate your R&D workflows. Additionally, SimuFlow provides solution accelerators for key workflows, including data transformation, asset, model, test and simulation configuration as well as cataloging data, simulation and test results in a centralized cloud data platform.
+
+### Core Capabilities
+
+<div class="grid cards" markdown>
+
+- **Real-time Data Integration**
+  - Collect real-world data from any test rig, device, asset or fleet
+  - Create a high-quality, centralized data repository with an indexed catalog
+  
+- **Configuration Management**
+  - Configure devices, tests, models and simulations with version control
+  - Record every version of every experiment in the data catalog
+
+- **Run Experiments**
+  - Serve models and automate simulations with simple workflows
+  - Containerized environments designed specifically for hardware engineers
+
+- **Virtual Engineering**
+  - Discover data from old programs and reprocess it with new models
+  - Accelerate new product concepts through virtual prototyping
+
+</div>
+
+## Get Started
+
+Ready to transform your hardware development process? Contact our team for a personalized demo or download our whitepaper to learn more about implementing SimuFlow in your organization.
+
+<div class="center" markdown>
+[Contact Sales](#){ .md-button .md-button--primary } [Download Whitepaper](#){ .md-button }
+</div>
