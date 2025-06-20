@@ -1,8 +1,73 @@
 # Project information
 site_name: SimuFlow
-site_url: https://your-site.com
+site_url: https://stevenrosam.github.io/new-site/
 site_author: SimuFlow Team
 site_description: Data and simulation platform for hardware engineering
+
+# Repository
+repo_name: SteveRosam/new-site
+repo_url: https://github.com/SteveRosam/new-site/
+
+# GitHub Pages
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/SteveRosam/new-site
+      name: GitHub repository
+
+# Deployment
+github_deploy: true
+remote_branch: gh-pages
+remote_name: origin
+
+# Plugins
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: timeago
+      enable_creation_date: true
+
+# Theme
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+
+# Extensions
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.snippets
+  - pymdownx.tabbed
+  - pymdownx.tilde
+
+# Customization
+extra_css:
+  - styles/extra.css
+
+extra_javascript:
+  - https://kit.fontawesome.com/YOUR_KIT_ID.js
+  - https://unpkg.com/material-icons@1.10.0/iconfont/material-icons.min.css
 
 # Copyright
 copyright: Copyright &copy; 2025 SimuFlow
