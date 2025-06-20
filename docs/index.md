@@ -47,6 +47,7 @@ Hardware engineers use the SimuFlow platform to digitize physical systems. Becau
     **CloudNC** leverages SimuFlow to optimize and automate CNC machines. By modeling cutting processes, CloudNC can optimize CAM profiles, anticipate tool breakages, and predict production cycle times. This improves Overall Equipment Effectiveness (OEE) by over 5%.
     
     [Read case study →](#)
+    
 - ### Energy
     
     **Juniz** uses SimuFlow to monitor complex battery plants distributed across Germany. By modeling batteries at the cell-level and running them on live plant data, they can cost-effectively manage battery usage and proactively detect battery faults, saving significant downtime costs.
