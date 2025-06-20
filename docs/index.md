@@ -62,7 +62,9 @@ Hardware engineers use the SimuFlow platform to digitize physical systems. Becau
 
 SimuFlow is an open, lightweight platform that integrates your live data into existing Model-Based Development tools (like MATLAB, Simulink and Modelica) to consolidate your R&D workflows. Additionally, SimuFlow provides solution accelerators for key workflows, including data transformation, asset, model, test and simulation configuration as well as cataloging data, simulation and test results in a centralized cloud data platform.
 
-### Core Capabilities
+## Core Capabilities
+
+### SimuFlow helps you realise your R&D workflows with: 
 
 - **Real-time Data Integration**  
   Connect to any data source and stream high-frequency time series data with sub-millisecond latency. Built-in connectors for MQTT, Kafka, OPC-UA, and more.

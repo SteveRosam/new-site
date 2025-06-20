@@ -61,6 +61,7 @@
   margin: 2em 0 0.8em;
   padding-bottom: 0.4em;
   border-bottom: 1px solid #eee;
+  color: var(--md-default-fg-color--light) !important;
 }
 
 .md-typeset h3 {
