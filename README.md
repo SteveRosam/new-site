@@ -1,6 +1,6 @@
-# SimuFlow Documentation
+# SiMuFlow Documentation
 
-This repository contains the source code for the SimuFlow documentation website, built with MkDocs and the Material for MkDocs theme.
+This repository contains the source code for the SiMuFlow documentation website, built with MkDocs and the Material for MkDocs theme.
 
 ## Getting Started
 

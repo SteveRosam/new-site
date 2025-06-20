@@ -1,0 +1,36 @@
+/* Desktop menu overrides */
+@media screen and (min-width: 76.25em) {
+  /* Main menu links */
+  .primary-nav .nav-menu > .menu-item > .nav-link {
+    color: var(--md-typeset-color) !important;
+  }
+  
+  /* Hover and active states */
+  .primary-nav .nav-menu > .menu-item > .nav-link:hover,
+  .primary-nav .nav-menu > .menu-item > .nav-link:focus,
+  .primary-nav .nav-menu > .menu-item > .nav-link.active {
+    color: var(--md-accent-fg-color) !important;
+  }
+  
+  /* Submenu items */
+  .primary-nav .submenu .nav-link {
+    color: var(--md-typeset-color) !important;
+  }
+  
+  .primary-nav .submenu .nav-link:hover,
+  .primary-nav .submenu .nav-link:focus,
+  .primary-nav .submenu .nav-link.active {
+    color: var(--md-accent-fg-color) !important;
+  }
+  
+  /* Submenu toggle button */
+  .primary-nav .submenu-toggle {
+    color: var(--md-typeset-color) !important;
+  }
+  
+  .primary-nav .submenu-toggle:hover,
+  .primary-nav .submenu-toggle:focus,
+  .primary-nav .submenu-toggle[aria-expanded="true"] {
+    color: var(--md-accent-fg-color) !important;
+  }
+}

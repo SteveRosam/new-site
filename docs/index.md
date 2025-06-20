@@ -1,6 +1,6 @@
 # Consolidate your data, models and configurations in one platform
 
-Hardware engineers use the SimuFlow platform to digitize physical systems. Because digital is always faster and cheaper than physical.
+Hardware engineers use the SiMuFlow platform to digitize physical systems. Because digital is always faster and cheaper than physical.
 
 ## Use Cases
 
@@ -38,33 +38,33 @@ Hardware engineers use the SimuFlow platform to digitize physical systems. Becau
 
 - ### Hardware Devices
     
-    **Viessmann** uses SimuFlow to accelerate R&D of clean energy HVAC products. By collecting a high-quality catalog of tests, configurations, models and simulations, and running rapid experiments, they reduce design-validation cycle time by 50%.
+    **Viessmann** uses SiMuFlow to accelerate R&D of clean energy HVAC products. By collecting a high-quality catalog of tests, configurations, models and simulations, and running rapid experiments, they reduce design-validation cycle time by 50%.
     
     [Read case study →](#)
 
 - ### Manufacturing
     
-    **CloudNC** leverages SimuFlow to optimize and automate CNC machines. By modeling cutting processes, CloudNC can optimize CAM profiles, anticipate tool breakages, and predict production cycle times. This improves Overall Equipment Effectiveness (OEE) by over 5%.
+    **CloudNC** leverages SiMuFlow to optimize and automate CNC machines. By modeling cutting processes, CloudNC can optimize CAM profiles, anticipate tool breakages, and predict production cycle times. This improves Overall Equipment Effectiveness (OEE) by over 5%.
     
     [Read case study →](#)
     
 - ### Energy
     
-    **Juniz** uses SimuFlow to monitor complex battery plants distributed across Germany. By modeling batteries at the cell-level and running them on live plant data, they can cost-effectively manage battery usage and proactively detect battery faults, saving significant downtime costs.
+    **Juniz** uses SiMuFlow to monitor complex battery plants distributed across Germany. By modeling batteries at the cell-level and running them on live plant data, they can cost-effectively manage battery usage and proactively detect battery faults, saving significant downtime costs.
     
     [Read case study →](#)
 
 </div>
 
-## The SimuFlow Platform
+## The SiMuFlow Platform
 
-### What is SimuFlow?
+### What is SiMuFlow?
 
-SimuFlow is an open, lightweight platform that integrates your live data into existing Model-Based Development tools (like MATLAB, Simulink and Modelica) to consolidate your R&D workflows. Additionally, SimuFlow provides solution accelerators for key workflows, including data transformation, asset, model, test and simulation configuration as well as cataloging data, simulation and test results in a centralized cloud data platform.
+SiMuFlow is an open, lightweight platform that integrates your live data into existing Model-Based Development tools (like MATLAB, Simulink and Modelica) to consolidate your R&D workflows. Additionally, SiMuFlow provides solution accelerators for key workflows, including data transformation, asset, model, test and simulation configuration as well as cataloging data, simulation and test results in a centralized cloud data platform.
 
 ## Core Capabilities
 
-### SimuFlow helps you realise your R&D workflows with: 
+### SiMuFlow helps you realise your R&D workflows with: 
 
 - **Real-time Data Integration**  
   Connect to any data source and stream high-frequency time series data with sub-millisecond latency. Built-in connectors for MQTT, Kafka, OPC-UA, and more.
@@ -86,7 +86,7 @@ SimuFlow is an open, lightweight platform that integrates your live data into ex
 
 ## Get Started
 
-Ready to transform your hardware development process? Contact our team for a personalized demo or download our whitepaper to learn more about implementing SimuFlow in your organization.
+Ready to transform your hardware development process? Contact our team for a personalized demo or download our whitepaper to learn more about implementing SiMuFlow in your organization.
 
 <div class="center" markdown>
 [Contact Sales](#){ .md-button .md-button--primary } [Download Whitepaper](#){ .md-button }

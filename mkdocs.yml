@@ -1,7 +1,7 @@
 # Project information
-site_name: SimuFlow
+site_name: SiMuFlow
 site_url: https://stevenrosam.github.io/new-site/
-site_author: SimuFlow Team
+site_author: SiMuFlow Team
 site_description: Data and simulation platform for hardware engineering
 
 # Repository
@@ -26,26 +26,7 @@ plugins:
       type: timeago
       enable_creation_date: true
 
-# Theme
-theme:
-  name: material
-  palette:
-    - scheme: default
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to dark mode
-    - scheme: slate
-      toggle:
-        icon: material/weather-night
-        name: Switch to light mode
-  features:
-    - navigation.tabs
-    - navigation.top
-    - search.highlight
-    - search.suggest
-    - content.code.copy
-    - content.tabs.link
-    - content.tooltips
+
 
 # Extensions
 markdown_extensions:
@@ -60,22 +41,41 @@ markdown_extensions:
   - pymdownx.tabbed
   - pymdownx.tilde
 
+# Navigation
+nav:
+  - Home: index.md
+  - Features:
+    - Overview: features/index.md
+    - Core Capabilities: features/capabilities.md
+    - Integration: features/integration.md
+  - Solutions:
+    - For Hardware Teams: solutions/hardware-teams.md
+    - For Data Scientists: solutions/data-science.md
+  - Documentation:
+    - Getting Started: docs/getting-started.md
+    - API Reference: docs/api-reference.md
+    - Configuration: docs/configuration.md
+  - About:
+    - Company: about/company.md
+    - Team: about/team.md
+    - Contact: about/contact.md
+
 # Customization
 extra_css:
   - styles/extra.css
+  - styles/desktop-menu.css
 
 extra_javascript:
-  - https://kit.fontawesome.com/YOUR_KIT_ID.js
   - https://unpkg.com/material-icons@1.10.0/iconfont/material-icons.min.css
 
 # Copyright
-copyright: Copyright &copy; 2025 SimuFlow
+copyright: Copyright &copy; 2025 SiMuFlow
 
 # Favicon
 extra:
   favicon: img/logo.png
 
-# Configuration
+# Theme Configuration
 theme:
   name: material
   palette:
@@ -98,6 +98,11 @@ theme:
     - navigation.sections
     - navigation.indexes
     - navigation.path
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
     - navigation.footer
     - search.suggest
     - search.highlight
