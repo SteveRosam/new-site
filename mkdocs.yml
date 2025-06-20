@@ -16,7 +16,6 @@ extra:
       name: GitHub repository
 
 # Deployment
-github_deploy: true
 remote_branch: gh-pages
 remote_name: origin
 
