@@ -2,6 +2,18 @@
 
 {% block htmltitle %}
   <title>{{ page.title | default(site_name, true) }}</title>
+  <!-- Alliance No.1 Font -->
+  <link href="https://cdn.jsdelivr.net/gh/rsms/inter@3.19.1/font-files/Inter.var.woff2" as="font" type="font/woff2" crossorigin>
+  <style>
+    @font-face {
+      font-family: 'Alliance No.1';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('https://cdn.jsdelivr.net/gh/rsms/inter@3.19.1/font-files/Inter.var.woff2') format('woff2');
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+  </style>
 {% endblock %}
 
 {% block header %}
@@ -11,7 +23,7 @@
       <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}" 
          class="md-header-nav__button md-logo" 
          aria-label="{{ config.site_name }}">
-        <img src="{{ 'img/cow.svg' | url }}" width="24" height="24" alt="logo">
+        <img src="{{ 'img/free.png' | url }}" width="24" height="24" alt="logo">
         <span class="md-header-nav__title">
           {{ config.site_name }}
         </span>

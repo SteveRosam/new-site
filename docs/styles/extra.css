@@ -81,6 +81,26 @@
 }
 
 /* ==========================================================================
+   Typography
+   ========================================================================== */
+
+:root {
+  --md-text-font: "Alliance No.1", system-ui, -apple-system, BlinkMacSystemFont, 
+                   "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", 
+                   "Droid Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Apply the font to all text elements */
+body {
+  font-family: var(--md-text-font);
+}
+
+/* Make sure code blocks and other monospace elements use a monospace font */
+code, kbd, pre, samp {
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+}
+
+/* ==========================================================================
    Homepage Components
    ========================================================================== */
 
