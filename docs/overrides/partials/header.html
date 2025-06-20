@@ -1,0 +1,50 @@
+{# Custom header with top-left navigation #}
+<nav class="md-header-nav md-grid" aria-label="{{ lang.t('tabs.title') }}">
+  <div class="md-header-nav__title">
+    <div class="md-header-nav__ellipsis">
+      <div class="md-header-nav__topic">
+        <a href="{{ config.site_url | default(nav.homepage.url, true) | url }}" class="header-logo">
+          {{ config.site_name }}
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Top-left navigation -->
+  <div class="md-header-nav__items">
+    <ul class="md-header-nav__list">
+      {% for nav_item in nav %}
+        {% if not nav_item.children %}
+          <li class="md-header-nav__item">
+            <a href="{{ nav_item.url | url }}" class="md-header-nav__link">
+              {{ nav_item.title }}
+            </a>
+          </li>
+        {% else %}
+          <li class="md-header-nav__item md-header-nav__item--nested">
+            <input class="md-toggle md-header-nav__toggle" type="checkbox" id="__nav_{{ loop.index }}" />
+            <label class="md-header-nav__link" for="__nav_{{ loop.index }}">
+              {{ nav_item.title }}
+              <span class="md-header-nav__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                  <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" fill="currentColor" />
+                </svg>
+              </span>
+            </label>
+            <nav class="md-header-nav" aria-label="{{ nav_item.title }}">
+              <ul class="md-header-nav__list">
+                {% for nav_item in nav_item.children %}
+                  <li class="md-header-nav__item">
+                    <a href="{{ nav_item.url | url }}" class="md-header-nav__link">
+                      {{ nav_item.title }}
+                    </a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </nav>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
