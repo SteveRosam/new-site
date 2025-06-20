@@ -43,7 +43,6 @@ markdown_extensions:
 
 # Navigation
 nav:
-  - Home: index.md
   - Features:
     - Overview: features/index.md
     - Core Capabilities: features/capabilities.md
@@ -145,7 +144,6 @@ plugins:
 # Navigation
 docs_dir: docs
 nav:
-  - Home: index.md
   - Pricing:
     - Installation: getting-started/installation.md
     - Configuration: getting-started/configuration.md

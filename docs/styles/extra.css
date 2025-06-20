@@ -23,7 +23,7 @@
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   height: 4rem;
 }
@@ -114,6 +114,7 @@
   overflow-y: auto;
   z-index: 100;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+  margin-left: 80px
 }
 
 .primary-nav.is-visible {
@@ -758,7 +759,7 @@ code, kbd, pre, samp {
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   height: 4rem;
 }
