@@ -12,6 +12,8 @@ Hardware engineers use the SiMuFlow platform to digitize physical systems. Becau
     
     Deliver high-quality products faster with an integrated, model-based data platform. Reduce risk, shorten timelines, and close the design-validation loop using real-time data from test rigs, fleets, and simulations.
     
+    ![](./img/f1-aero.png){ width=200 }
+    
     [Learn more →](#accelerate-product-development)
 
 - ### Optimize Production Processes
@@ -20,6 +22,8 @@ Hardware engineers use the SiMuFlow platform to digitize physical systems. Becau
     
     Develop novel processes by running model-based experiments on live rig data. Connect high-fidelity models to live production data to automate processes and continuously optimize performance.
     
+    ![](./img/r_and_d.png){ width=200 }
+    
     [Learn more →](#optimize-production)
 
 - ### Reduce Asset Downtime
@@ -27,6 +31,8 @@ Hardware engineers use the SiMuFlow platform to digitize physical systems. Becau
     ---
     
     Monitor complex, distributed assets and predict failures by connecting live data to high-fidelity models. Quickly evolve models through iterative experiments and continuous learning.
+    
+    ![](./img/heatpump.jpg){ width=200 }
     
     [Learn more →](#reduce-downtime)
 
@@ -40,18 +46,24 @@ Hardware engineers use the SiMuFlow platform to digitize physical systems. Becau
     
     **Viessmann** uses SiMuFlow to accelerate R&D of clean energy HVAC products. By collecting a high-quality catalog of tests, configurations, models and simulations, and running rapid experiments, they reduce design-validation cycle time by 50%.
     
+    ![](./img/indy-fan.jpg){ width=200 }
+
     [Read case study →](#)
 
 - ### Manufacturing
     
     **CloudNC** leverages SiMuFlow to optimize and automate CNC machines. By modeling cutting processes, CloudNC can optimize CAM profiles, anticipate tool breakages, and predict production cycle times. This improves Overall Equipment Effectiveness (OEE) by over 5%.
     
+    ![](./img/cnc.jpg){ width=200 }
+
     [Read case study →](#)
     
 - ### Energy
     
     **Juniz** uses SiMuFlow to monitor complex battery plants distributed across Germany. By modeling batteries at the cell-level and running them on live plant data, they can cost-effectively manage battery usage and proactively detect battery faults, saving significant downtime costs.
     
+    ![](./img/battery-park.png){ width=200 }
+
     [Read case study →](#)
 
 </div>
