@@ -1598,10 +1598,12 @@ a:focus {
   background-color: var(--md-footer-bg-color--dark);
 }
 
-/* ==========================================================================
-   Responsive adjustments
-   ========================================================================== */
+/* Hide footer navigation links */
+.md-footer__inner:not([hidden]) {
+  display: none;
+}
 
+/* Responsive adjustments */
 @media screen and (min-width: 76.25em) {
   .md-sidebar--primary {
     border-right: 1px solid var(--md-default-fg-color--lightest);
