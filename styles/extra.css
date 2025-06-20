@@ -155,7 +155,7 @@
 /* Ensure consistent color for all menu items */
 .menu-item > .nav-link,
 .menu-item > .submenu-toggle {
-  color: var(--md-default-fg-color);
+  color: var(--md-default-fg-color--light) !important;
   font-size: 1rem;
   font-weight: 500;
 }
@@ -177,7 +177,7 @@
   border: none;
   padding: 1rem 0;
   font: inherit;
-  color: var(--md-default-fg-color) !important; /* Force color consistency */
+  color: var(--md-footer-fg-color) !important; /* Force color consistency */
   font-size: 1rem; /* Match other menu items */
   font-weight: 500;
   text-align: left;
@@ -406,6 +406,7 @@ a:focus {
   --md-primary-fg-color--dark: #002984;
   --md-primary-bg-color: #fff;
   --md-primary-bg-color--light: #ffffffb3;
+  --md-default-fg-color--light: #e0e0e0;
   
   /* Accent colors */
   --md-accent-fg-color: #448aff;
@@ -927,7 +928,7 @@ code, kbd, pre, samp {
 
 /* Active states */
 .menu-item-has-children > .submenu-toggle.active {
-  color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color) !important;
 }
 
 /* Overlay when menu is open */
